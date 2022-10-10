@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Main from './components/Main';
 import Statestic from './components/Statestic';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Quiz from './components/Quiz';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog></Blog>
+      },
+      {
+        path: 'quiz',
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz/1'),
+        element: <Quiz></Quiz>
       }
     ]
   }
