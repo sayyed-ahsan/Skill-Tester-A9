@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './Quiz.css'
 import { BsFillEyeFill } from 'react-icons/bs';
-import Button from 'react-bootstrap/Button';
 import Toast from 'react-bootstrap/Toast';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Quiz = () => {
     const quiz = useLoaderData();
     const qustions = quiz.data.questions;
@@ -13,10 +14,9 @@ const Quiz = () => {
 
     const [questionId, setQustionId] = useState('');
 
-    const [showA, setShowA] = useState(true);
+    const [showA, setShowA] = useState(false);
 
     const toggleShowA = (id) => {
-
         setShowA(!showA)
         setQustionId(id);
     };
@@ -24,9 +24,11 @@ const Quiz = () => {
 
     const checkAnswer = (givenAns, rightAnswer) => {
         if (givenAns === rightAnswer) {
-            console.log('right')
+            toast.success('Right Answer !')
         }
-        else { console.log('Opps') }
+        else {
+            toast.error('Opps Wrong !')
+        }
     }
 
 
@@ -39,7 +41,7 @@ const Quiz = () => {
 
                     <div className='quiz-card'>
                         <div className='qustion-div'>
-                            <h3 className='text-center'> {qustion.question}</h3>
+                            <h3 className='text-center'> {(qustion.question.slice(3)).slice(0, -4)}</h3>
                             <div>
                                 <button onClick={() => toggleShowA(qustion.correctAnswer)} className='eye-button'>
                                     <BsFillEyeFill></BsFillEyeFill>
@@ -57,6 +59,9 @@ const Quiz = () => {
                     </div>
                 )
             }
+            <div>
+
+            </div>
             <div className='answer-tost'>
                 <Toast show={showA} onClose={() => toggleShowA(0)}>
                     <Toast.Header>
@@ -71,6 +76,7 @@ const Quiz = () => {
                 </Toast>
 
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
