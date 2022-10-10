@@ -68,7 +68,6 @@
 
 .link-button {
     text-decoration: none;
-
 }
 
 
@@ -98,6 +97,12 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 430px) {
+    .navbar-main {
+        flex-direction: column;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .navbar-main {
         padding: 10px 20px;
@@ -118,5 +123,23 @@
         display: inline-block;
         margin-left: 3px;
         margin-right: 3px;
+    }
+
+    .image img {
+        width: 90px;
+    }
+
+    .home-title {
+        font-size: 17px;
+    }
+
+    .test-button {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 845px) {
+    .all-quiz-cards {
+        display: block;
     }
 }

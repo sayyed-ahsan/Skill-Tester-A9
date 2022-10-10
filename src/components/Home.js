@@ -17,7 +17,7 @@ const Home = () => {
                     <img src={image} alt="" />
                 </div>
                 <div>
-                    <h2>Skills help you perform your daily tasks on <br /> behalf of the business you work for.</h2>
+                    <h2 className='home-title'>Skills help you perform your daily tasks on <br /> behalf of the business you work for.</h2>
                 </div>
             </div>
             <div className='all-quiz-cards'>
