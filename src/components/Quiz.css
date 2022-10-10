@@ -1,0 +1,26 @@
+.quiz-card {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border: 2px solid rgb(240, 219, 79);
+    margin-top: 50px;
+}
+
+
+.quz-answer {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    background-color: rgb(240, 219, 79);
+}
+
+.quz-answer h3 {
+    background-color: white;
+    padding: 10px 5px;
+    cursor: pointer;
+}
