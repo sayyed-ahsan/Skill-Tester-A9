@@ -26,9 +26,15 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
-        path: 'quiz',
-        loader: () => fetch('https://openapi.programming-hero.com/api/quiz/1'),
+        path: 'quiz/:quizId',
+        loader: async ({ params }) => {
+          return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+        },
         element: <Quiz></Quiz>
+      },
+      {
+        path: '/*',
+        element: <div className='text-center'><h1>Opps...! <br />Pag Not Found </h1></div>
       }
     ]
   }

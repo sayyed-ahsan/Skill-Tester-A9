@@ -7,6 +7,28 @@
     margin-top: 50px;
 }
 
+.qustion-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eye-button {
+    display: inline-block;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.eye-button:hover {
+    box-shadow: 0px 0px 5px yellow;
+    background-color: rgb(255, 0, 0);
+    color: white;
+
+}
+
 
 .quz-answer {
     max-width: 800px;
@@ -16,11 +38,26 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
-    background-color: rgb(240, 219, 79);
+    background-color: rgb(193, 246, 200);
 }
 
-.quz-answer h3 {
+
+
+.answer-btnn {
+    border: none;
     background-color: white;
     padding: 10px 5px;
     cursor: pointer;
+    font-size: larger;
+}
+
+.answer-btnn:hover {
+    background-color: rgb(19, 19, 18);
+    color: white;
+}
+
+.answer-tost {
+    position: fixed;
+    top: 45%;
+    left: 40%;
 }

@@ -1,6 +1,8 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import './Home.css';
 import image from './Images/4b78166fc51592e02a76f7ab344e93cd.jpg';
+import { BiRightArrowAlt } from 'react-icons/bi';
+
 
 const Home = () => {
 
@@ -26,9 +28,12 @@ const Home = () => {
                                 <img className='quiz-img mx-auto' src={quiz.logo} alt="" />
                             </div>
                             <h4 className='text-center my-4'>{quiz.name}</h4>
-                            <Link className='link-button' to={'quiz'}>
-                                <button className='test-button'>Start {quiz.name} Quiz
-                                </button>
+                            <Link to={`/quiz/${quiz.id}`} className='link-button'>
+                                <div className='button'>
+                                    <button className='test-button'>Start {quiz.name} Quiz
+                                        <BiRightArrowAlt className='icon'></BiRightArrowAlt>
+                                    </button>
+                                </div>
                             </Link>
                         </div>)
                 }

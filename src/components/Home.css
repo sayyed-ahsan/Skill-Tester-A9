@@ -75,7 +75,22 @@
 
 }
 
+
+
+.icon {
+    font-size: 50px;
+    color: white;
+}
+
+.test-button:hover {
+    background-color: rgb(249,
+            145,
+            54);
+}
+
 .test-button {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     border: 0;
     padding: 10px;
