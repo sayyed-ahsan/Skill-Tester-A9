@@ -1,0 +1,9 @@
+.blogs {
+    background-color: rgb(0, 0, 0);
+    color: rgb(215, 215, 215);
+    box-shadow: 3px 2px 15px rgb(247, 243, 149);
+}
+
+.answer {
+    font-size: 20px;
+}
