@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Tooltip } from 'react-bootstrap';
 import './Blog.css'
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Pie, PieChart, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 ;
 
 const Statestic = () => {
