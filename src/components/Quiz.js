@@ -9,7 +9,7 @@ const Quiz = () => {
     const quiz = useLoaderData();
     const qustions = quiz.data.questions;
 
-    console.log(qustions)
+    console.log(quiz.data.name)
 
 
     const [questionId, setQustionId] = useState('');
@@ -34,14 +34,14 @@ const Quiz = () => {
 
     return (
         <div>
-            <h1>{quiz.length}</h1>
+            <h4 className='mt-5 text-center'>Question Of {quiz.data.name}</h4>
 
             {
                 qustions.map(qustion =>
 
                     <div className='quiz-card'>
                         <div className='qustion-div'>
-                            <h3 className='text-center'> {(qustion.question.slice(3)).slice(0, -4)}</h3>
+                            <h5 className='text-center'> {(qustion.question.slice(3)).slice(0, -4)}</h5>
                             <div>
                                 <button onClick={() => toggleShowA(qustion.correctAnswer)} className='eye-button'>
                                     <BsFillEyeFill></BsFillEyeFill>

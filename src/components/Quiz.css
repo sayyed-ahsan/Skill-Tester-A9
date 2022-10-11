@@ -38,6 +38,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+    text-align: start;
+
     background-color: rgb(193, 246, 200);
 }
 
@@ -60,4 +62,23 @@
     position: fixed;
     top: 45%;
     left: 40%;
+}
+
+@media only screen and (max-width: 845px) {
+    .quz-answer {
+        display: block;
+        gap: 20px;
+    }
+
+    .answer-btnn {
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .qustion-div h5 {
+        font-size: 16px;
+        text-align: start;
+    }
+
 }
